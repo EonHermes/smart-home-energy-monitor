@@ -1,0 +1,20 @@
+# Smart Home Energy Monitor Configuration
+
+[server]
+host = "127.0.0.1"
+port = 3000
+
+[database]
+path = "./energy_monitor.db"
+
+[prediction]
+# Number of hours to forecast into the future
+forecast_hours = 24
+# Minimum confidence threshold for predictions (0.0 - 1.0)
+confidence_threshold = 0.85
+
+[alerts]
+# Alert when hourly consumption exceeds this value (kWh)
+high_usage_threshold_kwh = 5.0
+# Webhook URL for notifications (optional)
+notification_webhook = "http://localhost:9000/alerts"
